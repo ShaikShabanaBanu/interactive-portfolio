@@ -1,0 +1,118 @@
+/* ================= BASIC RESET ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= STICKY HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  height: 100vh;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  animation: slideDown 1.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SECTION SPACING ================= */
+section {
+  padding: 50px 30px;
+}
+
+/* Fix sticky header overlap on scroll */
+#about,
+#skills,
+#gallery,
+#contact {
+  scroll-margin-top: 90px;
+}
+
+/* ================= SKILLS ================= */
+#skills {
+  text-align: center;
+}
+
+.skill-box {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background: #eaeaea;
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.15);
+}
+
+/* ================= CONTACT ================= */
+#contact {
+  background: #f9f9f9;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header nav {
+    margin-top: 10px;
+  }
+}
